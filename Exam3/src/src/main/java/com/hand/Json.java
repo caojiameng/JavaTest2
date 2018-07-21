@@ -25,7 +25,14 @@ public class Json implements Runnable {
     private void writeToJson() throws IOException {
         File file = new File("../Exam3/tmp/股票编码.json");
         if (!file.exists()) {
-            file.mkdir();
+            if (!file.getParentFile().exists()) {
+                if (!file.getParentFile().mkdirs()) {
+                    throw new IOException("can not create file parent");
+                }
+            }
+            if (!file.createNewFile()) {
+                throw new IOException("can not create file");
+            }
         }
 
 

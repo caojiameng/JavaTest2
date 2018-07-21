@@ -33,9 +33,15 @@ public class Xml implements Runnable {
 
     private void saveXml(){
         try {
-            File file = new File("../Exam3/tmp/股票编码.xml");
             if (!file.exists()) {
-                file.mkdirs();
+                if (!file.getParentFile().exists()) {
+                    if (!file.getParentFile().mkdirs()) {
+                        throw new IOException("can not create file parent");
+                    }
+                }
+                if (!file.createNewFile()) {
+                    throw new IOException("can not create file");
+                }
             }
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();

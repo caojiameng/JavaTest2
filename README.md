@@ -8,7 +8,7 @@ build.sh分别放入了EXAM1,EXAM2,EXAM3三个文件夹中
 ## EXAM1
 要查看第一题则
 ``` markdown
-cd Exam2
+cd Exam1
 sh build.sh
 
 ```
@@ -16,15 +16,15 @@ sh build.sh
 ## Exam2
 要查看第二题则
 ``` markdown
-cd EXAM2
+cd Exam2
 sh build.sh
 
 ```
 ## Exam3
 要查看第三题则
 ``` markdown
-cd EXAM3
+cd Exam3
 sh build.sh
 
 ```
-如要查看其他题，在`sh build.sh`后记得`cd ..`返回JavaTest1文件夹再使用上述操作
+如要查看其他题，在`sh build.sh`后记得`cd ..`返回JavaTest2文件夹再使用上述操作
